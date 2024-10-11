@@ -7,9 +7,6 @@ stages:          # List of stages for jobs, and their order of execution
   - test
   - deploy
 
-dependency_scanning:
-  stage: test
-
 
 
 build-job:       # This job runs in the build stage, which runs first.
@@ -60,3 +57,6 @@ gemnasium-dependency_scanning:
     paths:
       - "**/gl-sbom-*.cdx.json"
       - gl-dependency-scanning-report.json
+  rules:
+    - when: always
+
