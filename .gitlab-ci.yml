@@ -5,7 +5,7 @@ stages:          # List of stages for jobs, and their order of execution
   - deploy
 
 include:
-- template: Jobs/Dependency-Scanning.gitlab-ci.yml
+- template: Dependency-Scanning.gitlab-ci.yml
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
