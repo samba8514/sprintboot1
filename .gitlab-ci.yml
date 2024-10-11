@@ -58,5 +58,5 @@ gemnasium-dependency_scanning:
       - "**/gl-sbom-*.cdx.json"
       - gl-dependency-scanning-report.json
   rules:
-    - when: always
+    - when: always  # this is the reason why it was not triggered before
 
