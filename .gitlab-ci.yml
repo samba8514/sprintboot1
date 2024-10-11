@@ -47,3 +47,13 @@ deploy-job:      # This job runs in the deploy stage.
   script:
     - echo "Deploying application..."
     - echo "Application successfully deployed."
+
+
+
+gemnasium-dependency_scanning:
+  variables:
+     DS_JAVA_VERSION: 17
+  artifacts:
+    paths:
+      - "**/gl-sbom-*.cdx.json"
+      - gl-dependency-scanning-report.json
